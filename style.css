@@ -110,7 +110,7 @@ table {
   width: 100%;
   border: 1px solid var(--border-color); 
   border-radius: 1.2rem;
-  border-spacing: 0ch;  
+  border-spacing: 0;
   
 }
 
@@ -119,6 +119,7 @@ table * {
   color: var(--txt-color);
 
   text-decoration: none;
+  
 }
 
 table th {
@@ -137,11 +138,6 @@ table th:last-child {
   border-top-right-radius: 1.2rem;
 }
 
-/*table tbody tr {
-  border: 1px solid var(--border-color);
-  border-spacing: 1px;
-}*/
-
 table tr:nth-child(odd) {
   background-color: var(--tr-primary-color);
 }
@@ -152,14 +148,15 @@ table tr:nth-child(even) {
 
 table td {
   padding: 2.4rem 4rem;
-  text-align: left;
+  text-align: left;  
 }
 
 td.user {
  display: flex;
  gap: 1.6rem;
- align-items: center;
+ align-items: center; 
 }
+
 
 .user img {
   width: 5rem;
@@ -180,7 +177,7 @@ td.remove {
 }
 
 table tr:last-child td:first-child {
- border-bottom-left-radius: 1.2rem;
+  border-bottom-left-radius: 1.2rem;
 }
 
 table tr:last-child td:last-child {
