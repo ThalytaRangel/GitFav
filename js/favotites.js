@@ -3,7 +3,16 @@ import { GithubUsers } from "./githubUsers.js";
 export class Favorites {
   constructor(root) {
     this.root = document.querySelector(root)
-    this.load()
+    this.load()        
+  }
+
+  checkForFavorites() {
+    if (this.entries.length === 0) {
+      document.querySelector('#empty-table').style.display = ""
+    } else {
+      document.querySelector('#empty-table').style.display = "none"
+    }
+
   }
 
   load() {
@@ -42,9 +51,9 @@ export class Favorites {
    
     this.entries = filteredEntries
     this.update()
-    this.save()
-  }
-  
+    this.save()  
+    this.checkForFavorites()  
+  } 
   
 }
 
@@ -91,6 +100,7 @@ export class FavoriteView extends Favorites {
     }
 
     this.tbody.append(row)
+    this.checkForFavorites()
   
   })
  } 
