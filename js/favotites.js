@@ -20,7 +20,7 @@ export class Favorites {
   }
 
   save() {
-    localStorage.setItem('@github-favorites', JSON.stringify(this.entries))
+    localStorage.setItem('@github-favorites:', JSON.stringify(this.entries))
   }
 
   async add(username) {
@@ -92,9 +92,9 @@ export class FavoriteView extends Favorites {
     row.querySelector('.followers').textContent = user.followers
 
     row.querySelector('.remove').onclick = () => {
-      const isOk = confirm('Tem certeza que deseja deletar esse usuário?')
+      const itsOk = confirm('Tem certeza que deseja deletar esse usuário?')
 
-      if(isOk){
+      if(itsOk){
         this.delete(user)
       }
     }

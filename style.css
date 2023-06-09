@@ -129,6 +129,19 @@ table * {
   overflow: auto;
 }
 
+table thead {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table th {
+  background-color: var(--table-th-color);
+  padding: 1.6rem 4rem;  
+
+  font-weight: 700;
+  text-align: left;   
+}
 
 table tbody {    
   border-bottom-left-radius: 1.2rem;
@@ -153,26 +166,10 @@ table tbody::-webkit-scrollbar-corner {
 }
 
 table tbody::-webkit-scrollbar-thumb {
-  background-color: var(--tr-secondary-color);  
-  border-radius: 1rem;  
+  background-color: var(--border-color);  
+  border-radius: 1rem;
 }
 
-table thead {
-  display: flex;
-}
-
-
-table th {
-  background-color: var(--table-th-color);
-  padding: 1.6rem 4rem;  
-
-  font-weight: 700;
-  text-align: left;   
-}
-
-table tbody tr td {
-  width: 100%;
-}
 
 table tr:nth-child(odd) {
   background-color: var(--tr-primary-color);
@@ -182,6 +179,9 @@ table tr:nth-child(even) {
   background-color: var(--tr-secondary-color);
 }
 
+table tbody tr td {
+  width: 25%;
+}
 
 table td {
   padding: 2.4rem 4rem;
