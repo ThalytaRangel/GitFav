@@ -132,7 +132,6 @@ table * {
 table thead {
   display: table;
   width: 100%;
-  table-layout: fixed;
 }
 
 table th {
